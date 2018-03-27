@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>iphoneX</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>/**iphoneX和iOS11适配相关宏****/
+//关闭scroview的自动contentInset
+#define closeAutoInset(View)     if (@available(iOS 11.0,*)) {View.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;}else{self.automaticallyAdjustsScrollViewInsets = NO;}
+
+// Status bar height.
+#define  GD_iPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? [[UIScreen mainScreen] currentMode].size.width == 1125.0&amp;&amp;[[UIScreen mainScreen] currentMode].size.height == 2436 : NO)
+#define  GD_StatusBarHeight                (GD_iPhoneX ? 44.f : 20.f)
+// Navigation bar height.
+#define  GD_NavigationBarHeight  44.f
+// Tabbar height.
+#define  GD_TabbarHeight                   (GD_iPhoneX ? (49.f+34.f) : 49.f)
+// Tabbar safe bottom margin.
+#define  GD_TabbarSafeBottomMargin         (GD_iPhoneX ? 34.f : 0.f)
+#define  GD_StatuBarSafeTopMargin          (GD_iPhoneX ? 44.f : 0.f)
+// Status bar &amp; navigation bar height.
+#define  GD_StatusBarAndNavigationBarHeight  (GD_iPhoneX ? 88.f : 64.f)
+
+#define GD_ViewSafeAreInsets(view) ({UIEdgeInsets insets; if(@available(iOS 11.0, *)) {insets = view.safeAreaInsets;} else {insets = UIEdgeInsetsZero;} insets;})
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>12E83C17-B46E-42BD-A512-D72170D44C29</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>iOS11及iphoneX适配的宏</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

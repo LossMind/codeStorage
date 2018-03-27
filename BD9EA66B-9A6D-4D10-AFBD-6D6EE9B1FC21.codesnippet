@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>buttonborder</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>UIButton *borderButton = [[UIButton alloc] init];
+borderButton.layer.borderColor = [UIColor &lt;#color#&gt;].CGColor;
+borderButton.layer.borderWidth = &lt;#borderWidth#&gt;;
+borderButton.titleLabel.font = [UIFont &lt;#font#&gt;];
+borderButton.clipsToBounds = YES;
+borderButton.layer.cornerRadius = &lt;#cornerRadius#&gt;;
+borderButton.backgroundColor = [UIColor &lt;#backgroundColor#&gt;];
+[borderButton setTitleColor:[UIColor &lt;#titleColor#&gt;] forState:UIControlStateNormal];
+[borderButton setTitle:&lt;#title#&gt; forState:UIControlStateNormal];
+[borderButton addTarget:self action:@selector(borderButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+[&lt;#code#&gt; addSubview:borderButton];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>BD9EA66B-9A6D-4D10-AFBD-6D6EE9B1FC21</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>创建圆角button</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>
